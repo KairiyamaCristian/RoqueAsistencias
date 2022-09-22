@@ -1,9 +1,9 @@
 
 from django.db import models
 
-
 class Materia(models.Model):
     nombre = models.CharField(max_length=20)
+
     
 class Profesor(models.Model):
     nombre = models.CharField(max_length=20)
