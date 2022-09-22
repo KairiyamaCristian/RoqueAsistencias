@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "asist_profe_view",
+    "asist_profe_view.apps.AsistProfeViewConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
