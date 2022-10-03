@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up (Franco Piunno)</title>
+    <link rel="stylesheet" type="text/css" href="signup.css">
+</head>
+<body>
+ <!--Elementos-->
+        <div class="fondo">
+        </div>
+    
+        <div class="logo">
+            <img src="TSDSlogowhite.png" width="85px" height="112px" alt="">
+        </div>
+    
+        <div class="redes">
+            <div class="facebook">
+                <a href="https://www.facebook.com/croquegonzalez"><img src="174848.png" width="32px" height="32px" alt="linkfacebook"></a>
+            </div>
+            <div class="ig">
+                <a href="https://www.instagram.com/croquegonzalez/"><img src="87390.png" width="32px" height="32px" alt="linkinsta"></a>
+            </div>
+            <div class="youtube">
+                <a href="https://www.youtube.com/user/croquegonzalez"><img src="174857 (2).png" width="32px" height="32px" alt="linkyt"></a>
+            </div>
+            <h1>© 2022 INSTITUTO SUPERIOR ROQUE GONZALEZ </h1>
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300&display=swap');
+                </style>
+            </div>
+        </div>
+
+ <!--Registro-->
+       <div class="signup">
+        <div class="signupbox">
+            <form>
+                <div class="inputgroupsignupcorreo">
+                    <input type="text" name="" placeholder="Email">
+                <div class="inputgroupsignupname">
+                    <input type="text" name="" placeholder="Username">
+                </div>    
+                <div class="inputgroupsignuppassword">
+                    <input type="password" name="" placeholder="Password" id="myInput">
+                    <span class="eye" onclick="ShowPassword()">
+                        <div class='codicon codicon-add2'></div>
+                        <i id="hide1" class="fa fa-eye"><img src="eye.svg" alt="eyeopen" width="32px" height="32px"></i>
+                        <i id="hide2" class="fa fa-eye-closed"><img src="eye-closed.svg" alt="eyeopen" width="32px" height="32px"></i>
+
+                        <script>
+                            function ShowPassword() {
+                                var x = document.getElementById ("myInput")
+                                var y = document.getElementById ("hide2")
+                                var z = document.getElementById ("hide1")
+
+                                if (x.type === 'password'){
+                                    x.type = "text"
+                                    y.style.display = "block"
+                                    z.style.display = "none"
+                                }
+                                else {
+                                    x.type = "password"
+                                    y.style.display = "none"
+                                    z.style.display = "block"
+                                }
+
+                            }
+
+                        </script>
+                    </span>
+                    <div class="signupbutton">
+                        <button>Sign Up</button>
+                    </div>
+                </div>
+            </form>  
+        </div>
+        <div class="changesignup">
+            <h1>Already have an account?</h1>
+            <a href="login.html"><h2>Log In</h2></a>
+        </div>   
+</body>
+</html>

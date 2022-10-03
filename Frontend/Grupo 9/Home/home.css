@@ -1,0 +1,132 @@
+body {
+    margin: 0%;
+    background-color: #EEEEEE;
+    font-family: sans-serif;
+}
+
+.rect{
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 53px;
+    width: 1653px;
+    height: 1080px;
+    top: 0px;
+    left: 268px;
+
+}
+
+.menu_sup{
+    position: absolute;
+    width: 1518px;
+    height: 124px;
+    left: 336px;
+    top: 49px;
+    
+}
+
+.search {
+    position: absolute;
+    width: 594px;
+    height: 60px;
+}
+
+.search input{
+    outline: none;
+    border: none;
+    position: absolute;
+    width: 594px;
+    height: 60px;
+    background: #EEEEEE;
+    border-radius: 67px;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    color: #BCBCBC;
+    line-height: 35px;
+    padding-left: 87px;
+}
+
+.search button{
+    outline: none;
+    border: none;
+    position: absolute;
+    left: 40px;
+    top: 19px;
+    opacity: 0.21;
+}
+
+.nav h1{
+    position: absolute;
+    width: 89px;
+    height: 43px;
+    top: 60px;
+    
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 33px;
+    line-height: 43px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #BCBCBC;
+}
+
+.menu_izq {
+    position: absolute;
+    width: 268px;
+    height: 1080px;
+    left: 0px;
+    top: 0px;
+}
+
+.menu_izq h1{
+    position: absolute;
+    width: 128px;
+    height: 64px;
+    left: 70px;
+    top: 818px;
+    
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 27px;
+    line-height: 119%;
+    /* or 32px */
+    
+    text-align: center;
+    
+    color: #6B6B6B;
+}
+
+.menu_izq h2{
+    position: absolute;
+    width: 123px;
+    height: 26px;
+    left: 73px;
+    top: 886px;
+    
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 26px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #6B6B6B;
+}
+
+.logo{
+    position: absolute;
+    width: 90px;
+    height: 124px;
+    left: 89px;
+    top: 68px;
+    
+    background: url(TSDSlogowhite.png);
+    
+}
