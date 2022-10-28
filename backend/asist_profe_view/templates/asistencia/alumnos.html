@@ -1,0 +1,6 @@
+<h1>{{materia.nombre}}</h1>
+<ul>
+    {% for alumno in materia.alumno_set %}
+        <li>{{alumno.nombre}}</li>
+    {% endfor %}
+</ul>

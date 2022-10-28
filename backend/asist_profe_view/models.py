@@ -1,4 +1,5 @@
 
+from email.policy import default
 from django.db import models
 
 class Materia(models.Model):
@@ -7,35 +8,35 @@ class Materia(models.Model):
     def __str__(self) -> str:
         return self.nombre
     
-class Profesor(models.Model):
-    nombre = models.CharField(max_length=20)
-    correo = models.CharField(max_length=20)
-    direccion = models.CharField(max_length=50)
-    materia = models.ForeignKey(Materia, on_delete=models.CASCADE)
+# class Profesor(models.Model):
+#     nombre = models.CharField(max_length=20)
+#     correo = models.CharField(max_length=20)
+#     direccion = models.CharField(max_length=50)
+#     materia = models.ForeignKey(Materia, on_delete=models.CASCADE)
 
-    def __str__(self) -> str:
-        return self.nombre
+#     def __str__(self) -> str:
+#         return self.nombre
 
 class Alumno(models.Model):
+    materia = models.ForeignKey(Materia, on_delete = models.CASCADE)
     nombre = models.CharField(max_length=20)
-    correo = models.CharField(max_length=20)
-    direccion = models.CharField(max_length=50)
+    asistencia = models.IntegerField(default=0)
 
     def __str__(self) -> str:
         return self.nombre
 
-class Asistencia(models.Model):
-    alumno = models.ForeignKey(Alumno, on_delete=models.CASCADE)
+# class Asistencia(models.Model):
+#     alumno = models.ForeignKey(Alumno, on_delete=models.CASCADE)
 
-class Fecha(models.Model):
-    tipo = models.CharField(max_length=20)
-    asistencia = models.ForeignKey(Asistencia, on_delete=models.CASCADE)
+# class Fecha(models.Model):
+#     tipo = models.CharField(max_length=20)
+#     asistencia = models.ForeignKey(Asistencia, on_delete=models.CASCADE)
 
-    def __str__(self) -> str:
-        return self.tipo
-class Estado(models.Model):
-    tipo = models.CharField(max_length=20)
-    asistencia = models.ForeignKey(Asistencia, on_delete=models.CASCADE)
+#     def __str__(self) -> str:
+#         return self.tipo
+# class Estado(models.Model):
+#     tipo = models.CharField(max_length=20)
+#     asistencia = models.ForeignKey(Asistencia, on_delete=models.CASCADE)
 
-    def __str__(self) -> str:
-        return self.tipo
+#     def __str__(self) -> str:
+        # return self.tipo

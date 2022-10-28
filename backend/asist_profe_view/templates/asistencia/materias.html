@@ -1,0 +1,13 @@
+{% if latest_materia_list %}
+    <ul>
+    {% for materia in latest_materia_list %}
+        <li>
+            <a href="{% url 'alumnos' materia_id=materia.id %}">
+                {{materia.nombre}}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay materias cargadas</p>
+{% endif %}
