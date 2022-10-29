@@ -1,6 +1,30 @@
 <h1>{{materia.nombre}}</h1>
 <ul>
-    {% for alumno in materia.alumno_set %}
-        <li>{{alumno.nombre}}</li>
+{% for alumno in materia.alumno_set.all %}
+    <li>{{alumno.nombre}}</li>
+{% endfor %}
+</ul> 
+
+
+
+
+
+
+
+
+
+{% comment %} 
+NO TENGRO CREADA LA PAGINA POR CADA ALUMNO POR LO TANTO NO PUEDO PONER UNA URL
+{% if materia %}
+    <ul>
+    {% for alumno in materia %}
+        <li>
+            <a href="{% url 'alumnos'  %}">
+                {{alumno.nombre}}
+            </a>
+        </li>
     {% endfor %}
-</ul>
+    </ul>
+{% else %}
+    <p>No hay alumnos cargadas</p>
+{% endif %} {% endcomment %}

@@ -2,6 +2,9 @@
     <ul>
     {% for materia in latest_materia_list %}
         <li>
+            {% comment %} <a href="{% url 'alumnos' materia_id=materia.id %}"> 
+            TIENE SENTIDO YA QUE CON LA HREF NOS QUEREMOS DIRIGIR HACIA LA URL DE ALUMNOS
+            Y TAMBIEN QUEREMOS QUE SEA DE NUESTRA MATERIA ID=? {% endcomment %}
             <a href="{% url 'alumnos' materia_id=materia.id %}">
                 {{materia.nombre}}
             </a>

@@ -17,4 +17,7 @@ def registro_materias(request):
 
 def registro_asistencia_por_materia(request, materia_id):
     materia = get_object_or_404(Materia, pk=materia_id)
+    # materia = Alumno.objects.all()
     return render(request,"asistencia/alumnos.html",{"materia": materia})
+
+    # return HttpResponse("Esto es el registro de asistencia por materia") FUNCIONA
