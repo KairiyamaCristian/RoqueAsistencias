@@ -16,17 +16,22 @@ body {
 }
 
 .rect h1{
+    width: 612px;
+    height: 112px;
+    top: 484px;
+    left: 521px;
     position: absolute;
-    width: 734px;
-    height: 224px;
-    left: 58px;
-    top: 570px;
+    
     font-family: 'IBM Plex Sans';
     font-style: normal;
-    font-weight: 1000;
-    font-size: 172px;
-    line-height: 224px;
-    color: #000000;
+    font-weight: 100;
+    font-size: 53px;
+    line-height: 105.5%;
+    /* or 56px */
+    
+    text-align: center;
+    
+    color: #6B6B6B;
 }
 
 .rect h2{
@@ -90,6 +95,25 @@ body {
     width: 89px;
     height: 43px;
     top: 60px;
+    
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 33px;
+    line-height: 43px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #BCBCBC;
+}
+
+.nav h2{
+    position: absolute;
+    width: 89px;
+    height: 43px;
+    top: 55px;
+    left: 118px;
     
     font-family: 'IBM Plex Sans';
     font-style: normal;
@@ -184,8 +208,19 @@ body {
     left: 89px;
     top: 68px;
     
-    background: url(TSDSlogowhite.png);
+    background: url("images/TSDSlogowhite.png");
     
+}
+
+.menusel {
+    position: absolute;
+    width: 280px;
+    height: 58px;
+    left: 13px;
+    top: 322px;
+    
+    background: #FFFFFF;
+    border-radius: 43px;
 }
 
 .Materias {
@@ -208,10 +243,10 @@ body {
     top: -17px;
     font-family: 'IBM Plex Sans';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 27px;
     line-height: 35px;
-    color: #A3A3A3;
+    color: #4864C8;
 }
 
 
@@ -220,7 +255,7 @@ body {
     width: 191px;
     height: 35px;
     left: 47px;
-    top: 392px;
+    top: 398px;
 }
 
 .CalendarioIcon {

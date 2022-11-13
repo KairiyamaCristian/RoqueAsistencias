@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'asist_profe_view/home.css' %}">
 </head>
 <body>
     <div class="rect">
@@ -18,32 +19,32 @@
 
     <div class="menu">
         <div class="menu_izq">
-            <div class="Materias"><a href="materias.html"><div class="MateriasIcon"><img src="categories.png" width="23px" height="23px" alt=""></div>
+            <div class="Materias"><a href="{% url 'Materias' %}"><div class="MateriasIcon"><img src="{% static 'asist_profe_view/images/categories.png' %}" width="23px" height="23px" alt=""></div>
                 <h1>Materias</h1></a>
             </div>
             <div class="Calendario">
-                <div class="CalendarioIcon"><img src="calendar.png" width="21px" height="21px" alt=""></div>
+                <div class="CalendarioIcon"><img src="{% static 'asist_profe_view/images/calendar.png' %}" width="21px" height="21px" alt=""></div>
                 <h1>Calendario</h1>
             </div>
             <div class="Ajustes">
-                <div class="AjustesIcon"><img src="gear.png" width="21px" height="21px" alt=""></div>
+                <div class="AjustesIcon"><img src="{% static 'asist_profe_view/images/gear.png' %}" width="21px" height="21px" alt=""></div>
                 <h1>Ajustes</h1>
             </div>
             <div class="logo">
-                <img src="TSDSlogowhite.png" width="85px" height="112px" alt="">
+                <img src="{% static 'asist_profe_view/images/TSDSlogowhite.png' %}" width="85px" height="112px" alt="">
             </div>
         </div>
         <div class="menu_sup">
             <div class="search">
                 <input type="text" name="" placeholder="Buscar">
-                <button type="submit"><img src="search.png" alt="" width="24px" height="24px"></button>
+                <button type="submit"><img src="{% static 'asist_profe_view/images/search.png' %}" alt="" width="24px" height="24px"></button>
             </div>
             <div class="nav">
                 <h1>Home</h1>
             </div>
             <div class="User">
-                <div class="Mensaje"><img src="mail.png" width="39px" height="39px" alt=""></div>
-                <div class="Notificacion"><img src="notification.png" width="34px" height="39px" alt=""></div>
+                <div class="Mensaje"><img src="{% static 'asist_profe_view/images/mail.png' %}" width="39px" height="39px" alt=""></div>
+                <div class="Notificacion"><img src="{% static 'asist_profe_view/images/notification.png' %}" width="34px" height="39px" alt=""></div>
                 <div class="Userphoto"></div>
             </div>
         </div>

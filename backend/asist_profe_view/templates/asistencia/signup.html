@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up (Franco Piunno)</title>
-    <link rel="stylesheet" type="text/css" href="signup.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'asist_profe_view/signup.css' %}">
 </head>
 <body>
  <!--Elementos-->
@@ -13,18 +14,18 @@
         </div>
     
         <div class="logo">
-            <img src="TSDSlogowhite.png" width="85px" height="112px" alt="">
+            <img src="{% static 'asist_profe_view/images/TSDSlogowhite.png' %}" width="85px" height="112px" alt="">
         </div>
     
         <div class="redes">
             <div class="facebook">
-                <a href="https://www.facebook.com/croquegonzalez"><img src="174848.png" width="32px" height="32px" alt="linkfacebook"></a>
+                <a href="https://www.facebook.com/croquegonzalez"><img src="{% static 'asist_profe_view/images/174848.png' %}" width="32px" height="32px" alt="linkfacebook"></a>
             </div>
             <div class="ig">
-                <a href="https://www.instagram.com/croquegonzalez/"><img src="87390.png" width="32px" height="32px" alt="linkinsta"></a>
+                <a href="https://www.instagram.com/croquegonzalez/"><img src="{% static 'asist_profe_view/images/87390.png' %}" width="32px" height="32px" alt="linkinsta"></a>
             </div>
             <div class="youtube">
-                <a href="https://www.youtube.com/user/croquegonzalez"><img src="174857 (2).png" width="32px" height="32px" alt="linkyt"></a>
+                <a href="https://www.youtube.com/user/croquegonzalez"><img src="{% static 'asist_profe_view/images/174857 (2).png' %}" width="32px" height="32px" alt="linkyt"></a>
             </div>
             <h1>© 2022 INSTITUTO SUPERIOR ROQUE GONZALEZ </h1>
                 <style>
@@ -46,9 +47,8 @@
                     <input type="password" name="" placeholder="Password" id="myInput">
                     <span class="eye" onclick="ShowPassword()">
                         <div class='codicon codicon-add2'></div>
-                        <i id="hide1" class="fa fa-eye"><img src="eye.svg" alt="eyeopen" width="32px" height="32px"></i>
-                        <i id="hide2" class="fa fa-eye-closed"><img src="eye-closed.svg" alt="eyeopen" width="32px" height="32px"></i>
-
+                        <i id="hide1" class="fa fa-eye"><img src="{% static 'asist_profe_view/images/eye.svg' %}" alt="eyeopen" width="32px" height="32px"></i>
+                        <i id="hide2" class="fa fa-eye-closed"><img src="{% static 'asist_profe_view/images/eye-closed.svg' %}" alt="eyeopen" width="32px" height="32px"></i>
                         <script>
                             function ShowPassword() {
                                 var x = document.getElementById ("myInput")
@@ -71,14 +71,16 @@
                         </script>
                     </span>
                     <div class="signupbutton">
-                        <button>Sign Up</button>
+                        <button>
+                            Sign Up
+                        </button>
                     </div>
                 </div>
             </form>  
         </div>
         <div class="changesignup">
             <h1>Already have an account?</h1>
-            <a href="login.html"><h2>Log In</h2></a>
+            <a href="{% url 'index' %}"><h2>Log In</h2></a>
         </div>   
 </body>
 </html>

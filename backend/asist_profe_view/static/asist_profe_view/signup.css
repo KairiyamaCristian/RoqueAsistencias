@@ -6,23 +6,18 @@ body {
 }
 
 .fondo {
-    background: url(pexels-christina-morillo-1181676.jpg) no-repeat center fixed;
+    background: url("images/pexels-christina-morillo-1181681.jpg") no-repeat center fixed;
     background-size: cover;
     mix-blend-mode: luminosity;
     height: 100vh;
     opacity: 0.2;
-    filter: blur(5px);
+    filter: blur(3px);
 }
 
 .logo {
     position: absolute;
     left: 917px;
     top: 60px;
-}
-
-
-.redes{
-    color: white;
 }
 
 /* © 2022 Instituto Superior Roque Gonzalez */
@@ -59,28 +54,50 @@ h1 {
     top: 905px;
 }
 
-.loginbox {
+
+.redes{
+    color: white;
+}
+
+
+.signupbox {
     box-sizing: border-box;
     position: absolute;
     width: 534px;
-    height: 361px;
+    height: 434px;
     left: 693px;
-    top: 330px;
+    top: 303px;
     background: rgba(255, 255, 255, 0.08);
     box-shadow: 0px 2px 7px 7px rgba(0, 0, 0, 0.1);
     border-radius: 14px;
 }
 
-
-.inputgroupname input{
+.inputgroupsignupcorreo input {
     outline: none;
     border: none;
-    position: relative;
     box-sizing: border-box;
+    position: absolute;
     width: 430px;
     height: 75px;
     left: 52px;
-    top: 58px;
+    top: 49px;
+    background: #E4E4E4;
+    border-radius: 14px;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    padding-left: 29px;
+
+}
+
+.inputgroupsignupname input {
+    top: 143px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 430px;
+    height: 75px;
+    left: 52px;
     background: #E4E4E4;
     border-radius: 14px;
     font-family: 'IBM Plex Sans';
@@ -90,15 +107,13 @@ h1 {
     padding-left: 29px;
 }
 
-.inputgrouppassword input {
-    outline: none;
-    border: none;
-    position: relative;
+.inputgroupsignuppassword input {
+    top: 237px;
     box-sizing: border-box;
+    position: absolute;
     width: 430px;
     height: 75px;
     left: 52px;
-    top: 77px;
     background: #E4E4E4;
     border-radius: 14px;
     font-family: 'IBM Plex Sans';
@@ -108,14 +123,14 @@ h1 {
     padding-left: 29px;
 }
 
-.inputgrouppassword button {
+.signupbutton button {
     outline: none;
     border: none;
     position: absolute;
     width: 188px;
     height: 50px;
     left: 294px;
-    top: 250px;
+    top: 335px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 7px;
     font-family: 'IBM Plex Sans';
@@ -124,21 +139,10 @@ h1 {
     color: #FFFFFF;
 }
 
-.inputgrouppassword h1 {
-    position: absolute;
-    left: 97px;
-    top: 242px;
-
-    font-family: 'IBM Plex Sans';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-}
-
 i {
     position: absolute;
     left: 419px;
-    top: 174px; 
+    top: 259px; 
     opacity: 0.5;
 }
 
@@ -150,71 +154,23 @@ i {
     display: none;
 }
 
-.lbl {
-    box-sizing: border-box;
-    position: absolute;
-    width: 34px;
-    height: 18px;
-    left: 56px;
-    top: 250px;
-    border: 1px solid #E4E4E4;
-    border-radius: 13px;   
-}
-
-#switch:checked~ .lbl {
-    box-sizing: border-box;
-    position: absolute;
-    width: 34px;
-    height: 18px;
-    left: 56px;
-    top: 250px;
-    background: #D9D9D9;
-    border-radius: 13px;  
-}
-
-.lbl::after {
-    position: absolute;
-    content:'';
-    width: 10px;
-    height: 10px;
-    left: 3px;
-    top: 3px;
-    background: #FFFFFF;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-#switch:checked~ .lbl::after {
-    position: absolute;
-    content:'';
-    width: 10px;
-    height: 10px;
-    left: 19px;
-    top: 3px;
-    background: #232323;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-#switch{
-    display: none;
-}
-
-.changelogin h1 {
+.changesignup h1 {
     position: absolute;
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
     color: #FFFFFF;
-    left: 825px;
-    top: 710px;
+    width: 228px;
+    height: 21px;
+    top: 445px;
+    left: 121px;
 }
 
-.changelogin h2 {
+.changesignup h2 {
     position: absolute;
-    left: 925px;
-    top: 702px;
+    left: 353px;
+    top: 437px;
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 600;

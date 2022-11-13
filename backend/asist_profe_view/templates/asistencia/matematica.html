@@ -1,34 +1,18 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Materias</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'asist_profe_view/materias.css' %}">
+    <title>Matematica</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'asist_profe_view/matematica.css' %}">
 </head>
 <body>
-    <div class="rect">
-        <h1>Todavia no tienes materias registradas</h1>
-        {% if latest_materia_list %}
-        <ul>
-            {% for materia in latest_materia_list %}
-            <li>
-                {% comment %} <a href="{% url 'alumnos' materia_id=materia.id %}"> 
-                TIENE SENTIDO YA QUE CON LA HREF NOS QUEREMOS DIRIGIR HACIA LA URL DE ALUMNOS
-                Y TAMBIEN QUEREMOS QUE SEA DE NUESTRA MATERIA ID=? {% endcomment %}
-                <a href="{% url 'alumnos' materia_id=materia.id %}">
-                    {{materia.nombre}}
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-        {% else %}
-            <p>No hay materias cargadas</p>
-        {% endif %}
-    </div>
+    <div class="rect"></div>
+    <div class="avisos"><h1>Avisos</h1></div>
+    <div class="tareas"><h1>No hay tareas pendientes</h1></div>
+    <div class="examen"><h1>No hay examenes programados</h1></div>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300&display=swap');
     </style>
@@ -59,11 +43,16 @@
             </div>
             <div class="nav">
                 <a href="{% url 'login' %}"><h1>Home</h1></a>
-                <h2>Materias</h2>
+                <h2>{{materia.nombre}}</h2>
+                <ul>
+                {% for alumno in materia.alumno_set.all %}
+                    <li>{{alumno.nombre}}</li>
+                {% endfor %}
+                </ul> 
             </div>
             <div class="User">
                 <div class="Mensaje"><img src="{% static 'asist_profe_view/images/mail.png' %}" width="39px" height="39px" alt=""></div>
-                <div class="Notificacion"><img src="{% static 'asist_profe_view/images/nosearch.pngtification.png' %}" width="34px" height="39px" alt=""></div>
+                <div class="Notificacion"><img src="{% static 'asist_profe_view/images/notification.png' %}" width="34px" height="39px" alt=""></div>
                 <div class="Userphoto"></div>
             </div>
         </div>
