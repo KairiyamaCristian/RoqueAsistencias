@@ -11,9 +11,9 @@
 </head>
 <body>
     <div class="rect">
-        <h1>Todavia no tienes materias registradas</h1>
+        {% comment %} <h1>Todavia no tienes materias registradas</h1> {% endcomment %}
         {% if latest_materia_list %}
-        <ul>
+        <h1>
             {% for materia in latest_materia_list %}
             <li>
                 {% comment %} <a href="{% url 'alumnos' materia_id=materia.id %}"> 
@@ -24,7 +24,7 @@
                 </a>
             </li>
             {% endfor %}
-        </ul>
+        </h1>
         {% else %}
             <p>No hay materias cargadas</p>
         {% endif %}

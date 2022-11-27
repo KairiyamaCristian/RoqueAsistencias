@@ -53,19 +53,20 @@ body {
     border-radius: 52px;
 }
 
-.tareas h1 {
+.tareas ul {
     position: absolute;
     width: 195px;
     height: 86px;
-    left: 406px;
-    top: 194px;
+    left: 80px;
+    top: 12px;
+    list-style: none;
     
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 100;
     font-size: 33px;
     line-height: 43px;
-    text-align: center;
+    
     
     color: #6B6B6B;
 }

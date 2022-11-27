@@ -11,7 +11,13 @@
 <body>
     <div class="rect"></div>
     <div class="avisos"><h1>Avisos</h1></div>
-    <div class="tareas"><h1>No hay tareas pendientes</h1></div>
+    <div class="tareas">
+    <ul>
+        {% for alumno in materia.alumno_set.all %}
+        <li>{{alumno.nombre}}</li>
+        {% endfor %}
+    </ul> 
+    </div>
     <div class="examen"><h1>No hay examenes programados</h1></div>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300&display=swap');
@@ -44,11 +50,6 @@
             <div class="nav">
                 <a href="{% url 'login' %}"><h1>Home</h1></a>
                 <h2>{{materia.nombre}}</h2>
-                <ul>
-                {% for alumno in materia.alumno_set.all %}
-                    <li>{{alumno.nombre}}</li>
-                {% endfor %}
-                </ul> 
             </div>
             <div class="User">
                 <div class="Mensaje"><img src="{% static 'asist_profe_view/images/mail.png' %}" width="39px" height="39px" alt=""></div>
