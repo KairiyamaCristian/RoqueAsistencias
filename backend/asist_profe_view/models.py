@@ -1,35 +1,55 @@
+import datetime
 
 from email.policy import default
 from django.db import models
+from django.utils import timezone
 
 class Profesor(models.Model):
-    nombre = models.CharField(max_length=20)
-    correo = models.CharField(max_length=20)
+    nombre = models.CharField(max_length=30)
+    correo = models.CharField(max_length=50)
     direccion = models.CharField(max_length=50)
+    contraseña= models.CharField(max_length=50)
 
     def __str__(self) -> str:
         return self.nombre    
 
-class Materia(models.Model):
-    nombre = models.CharField(max_length=20)
+class Usuario(models.Model):
+
     profesor = models.ForeignKey(Profesor, on_delete=models.CASCADE)
+    contraseña= models.CharField(max_length=50)
+
+    def __str__(self) -> str:
+        return self.profesor  
+
+class Materia(models.Model):
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    nombre = models.CharField(max_length=20)
+
+    def __str__(self) -> str:
+        return self.nombre
+
+class Alumno(models.Model):
+    nombre = models.CharField(max_length=20)
 
     def __str__(self) -> str:
         return self.nombre
     
-class Alumno(models.Model):
-    nombre = models.CharField(max_length=20)
+
+class Materia_Alumno(models.Model):
+    alumno = models.ForeignKey(Alumno, on_delete = models.CASCADE)
     materia = models.ForeignKey(Materia, on_delete = models.CASCADE)
-    asistencia = models.IntegerField(default=0)
 
     def __str__(self) -> str:
-        return self.nombre
+        return self.alumno
 
 class Fecha(models.Model):
-    tipo = models.CharField(max_length=20)
-
+    fecha = models.DateTimeField("Fecha de publicacion")
+    
     def __str__(self) -> str:
-        return self.tipo
+        return self.fecha
+
+    def fecha_reciente(self):
+        return self.fecha >= timezone.now() - datetime.timedelta(days=1)
 
 class Estado(models.Model):
     tipo = models.CharField(max_length=20)

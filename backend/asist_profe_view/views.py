@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from asist_profe_view.models import Materia,Alumno
+from asist_profe_view.models import Materia,Alumno,Profesor,Fecha,Estado,Asistencia
 
 from .models import Materia
 # Create your views here.
