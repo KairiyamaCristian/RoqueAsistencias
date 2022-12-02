@@ -13,10 +13,11 @@
     <div class="avisos"><h1>Avisos</h1></div>
     <div class="tareas">
     <ul>
-        {% for alumno in materia.alumno_set.all %}
-        <li>{{alumno.nombre}}</li>
+        {% for alumno in materia.materia_alumno_set.all %}
+        <li>{{alumno.nombre}} <input type=checkbox></input></li>
         {% endfor %}
     </ul> 
+    <button>Tomar asistencia</button>
     </div>
     <div class="examen"><h1>No hay examenes programados</h1></div>
     <style>

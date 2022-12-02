@@ -1,6 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404,redirect
 from django.http import HttpResponse
-from asist_profe_view.models import Materia,Alumno,Profesor,Fecha,Estado,Asistencia
+from asist_profe_view.models import Materia,Alumno,Profesor,Usuario,Fecha,Estado,Asistencia, Materia_Alumno
 
 from .models import Materia
 # Create your views here.
@@ -24,3 +24,13 @@ def registro_asistencia_por_materia(request, materia_id):
     return render(request,"asistencia/matematica.html",{"materia": materia})
 
     # return HttpResponse("Esto es el registro de asistencia por materia") FUNCIONA
+
+
+# def insercion(request):
+#     materia_alumno= request.POST("")
+#     fecha= request.POST("")
+#     estado= request.POST("")
+    
+#     asistencia=Asistencia.objects.create(materia_alumno=,estado=)
+#     # materia = Alumno.objects.all()
+#     return redirect("/")

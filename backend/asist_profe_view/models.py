@@ -14,12 +14,11 @@ class Profesor(models.Model):
         return self.nombre    
 
 class Usuario(models.Model):
-
-    profesor = models.ForeignKey(Profesor, on_delete=models.CASCADE)
+    nombre = models.CharField(max_length=30)
     contraseña= models.CharField(max_length=50)
 
     def __str__(self) -> str:
-        return self.profesor  
+        return self.nombre  
 
 class Materia(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
@@ -36,17 +35,19 @@ class Alumno(models.Model):
     
 
 class Materia_Alumno(models.Model):
+    nombre = models.CharField(max_length=20)
     alumno = models.ForeignKey(Alumno, on_delete = models.CASCADE)
     materia = models.ForeignKey(Materia, on_delete = models.CASCADE)
 
     def __str__(self) -> str:
-        return self.alumno
+        return self.nombre
 
 class Fecha(models.Model):
+    nombre = models.CharField(max_length=20)
     fecha = models.DateTimeField("Fecha de publicacion")
     
     def __str__(self) -> str:
-        return self.fecha
+        return self.nombre
 
     def fecha_reciente(self):
         return self.fecha >= timezone.now() - datetime.timedelta(days=1)
@@ -58,8 +59,10 @@ class Estado(models.Model):
         return self.tipo
 
 class Asistencia(models.Model):
-    alumno = models.ForeignKey(Alumno, on_delete=models.CASCADE)
+    codigo = models.CharField(max_length=20)
+    alumno = models.ForeignKey(Materia_Alumno, on_delete=models.CASCADE)
     fecha = models.ForeignKey(Fecha, on_delete=models.CASCADE)
     estado = models.ForeignKey(Estado, on_delete=models.CASCADE)
 
-
+    def __str__(self) -> str:
+        return self.codigo
