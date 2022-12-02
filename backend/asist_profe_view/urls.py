@@ -12,5 +12,7 @@ urlpatterns = [
     path("materia/", views.registro_materias, name="Materias"),
     #asist_profe_view/materia/1
     path("materia/<int:materia_id>/", views.registro_asistencia_por_materia, name="alumnos"),
+    #intento de insercion
+    # path("insercion/", views.insercion, name="insertar"),
 ]
 #ver como hacer las partes de materia y alumnos
